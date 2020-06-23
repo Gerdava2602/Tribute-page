@@ -1,0 +1,145 @@
+body {
+            background-color: #eef4d4;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #8a6552;
+        }
+
+        #main {
+
+            background-color: #daefb3;
+            width: 99%;
+            height: 95%;
+            display: grid;
+            grid-template-columns: 1fr;
+            /*grid-template-rows: 100px repeat(3, 1fr);*/
+
+            grid-template-areas: "title"
+                "image"
+                "info"
+                "info";
+            border-radius: 10px;
+        }
+
+        #main #title {
+            /*background-color: bisque;*/
+            grid-area: title;
+            width: 80%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-self: center;
+            align-self: center;
+        }
+
+        #title p {
+            margin-top: -10px;
+            justify-self: center;
+            text-align: justify;
+        }
+
+        #image {
+            justify-self: center;
+            align-self: center;
+            width: 90%;
+            height: auto;
+        }
+
+        #img-div {
+            background-color: #eef4d4;
+            width: 90%;
+            height: auto;
+            margin: 10px;
+            grid-area: image;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            border-radius: 10px;
+        }
+
+        #img-div p {
+            /* background-color: darkgray;*/
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            width: 100%;
+        }
+
+        #image-caption {
+            justify-self: center;
+            align-self: center;
+        }
+
+        #tribute-info {
+            /*background-color: blueviolet;*/
+            grid-area: info;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+        }
+
+        #tribute-info p {
+            padding: 5px;
+            text-align: justify;
+        }
+
+        #tribute-info #list {
+            /*background-color: darkgoldenrod;*/
+            grid-area: info;
+            width: 60%;
+        }
+
+        @media (max-width: 1000px) {
+            #tribute-info #list {
+                /*background-color: darkgoldenrod;*/
+                grid-area: info;
+                width: 110%;
+            }
+
+            #img-div {
+                background-color: #eef4d4;
+                width: 90%;
+                height: 54vw;
+                grid-area: image;
+                display: flex;
+                flex-direction: column;
+                justify-self: center;
+                border-radius: 10px;
+            }
+
+            #tribute-info {
+                /*background-color: blueviolet;*/
+                grid-area: info;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-self: center;
+                align-items: center;
+            }
+
+            #main #title {
+                grid-area: title;
+                display: flex;
+                margin: 10px;
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                justify-self: center;
+                align-self: center;
+
+            }
+
+
+
+        }
+
+        #tribute-info #list li {
+            padding: 8px;
+            text-align: justify;
+            font-size: 14px;
+        }
